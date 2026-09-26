@@ -1,0 +1,22 @@
+{
+    "Antigravity": {
+        "log_pattern": "~/.gemini/antigravity-cli/brain/**/*.jsonl",
+        "keywords": ["waiting_for_input", "waiting for user", "action required", "USER_INPUT"]
+    },
+    "Cursor": {
+        "log_pattern": "~/.config/Cursor/logs/**/*.log",
+        "keywords": ["waiting for user", "permission required", "task completed"]
+    },
+    "VS Code": {
+        "log_pattern": "~/.config/Code/logs/**/*.log",
+        "keywords": ["waiting for user", "permission required", "task completed"]
+    },
+    "Claude Code": {
+        "log_pattern": "~/.claude/**/*.log",
+        "keywords": ["waiting for input", "permission required", "task completed", "approval"]
+    },
+    "Qoder": {
+        "log_pattern": "~/.qoder/**/*.log",
+        "keywords": ["waiting for user", "permission required", "task completed", "action required"]
+    }
+}
