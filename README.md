@@ -1,6 +1,6 @@
 # Pingme
 
-Pingme is a lightweight Python daemon that monitors log files from various AI coding assistants (like Cursor, Claude Code, Antigravity, VS Code, Qoder) and alerts you with a desktop notification and sound when a specific keyword is detected. 
+Pingme is a lightweight Python daemon that monitors log files from various AI coding assistants (like Cursor, Claude Code, Antigravity, VS Code, Qoder, OpenCode, CommandCode) and alerts you with a desktop notification and sound when a specific keyword is detected. 
 
 It is designed to let you know exactly when an AI agent is waiting for your input, needs permission, or has completed a task, so you don't have to constantly check back on long-running processes.
 
@@ -57,3 +57,10 @@ python3 pingme.py
 ```
 
 The script will stay running, silently watching your log files. When a keyword is found, you will hear a ping and see a desktop notification showing exactly what the AI agent needs!
+
+## Automated AI Setup
+
+If you prefer not to set up Pingme manually, you can simply provide the following prompt to your AI assistant (like Claude, Cursor, Antigravity, etc.). The AI agent will automatically configure and run Pingme on your system:
+
+> **Prompt for AI Agent:**
+> "Please set up the Pingme daemon on my system to monitor AI coding assistants. Ensure my system has `notify-send` and audio playback utilities installed. Check the `config.json` file for log paths and update them if needed based on my OS. Finally, run `python3 pingme.py` in the background so it can alert me when an AI agent needs my input or finishes a task."

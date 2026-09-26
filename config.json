@@ -18,5 +18,13 @@
     "Qoder": {
         "log_pattern": "~/.qoder/**/*.log",
         "keywords": ["waiting for user", "permission required", "task completed", "action required"]
+    },
+    "OpenCode": {
+        "log_pattern": "~/.opencode/**/*.log",
+        "keywords": ["waiting for user", "permission required", "task completed", "action required", "approval"]
+    },
+    "CommandCode": {
+        "log_pattern": "~/.commandcode/**/*.log",
+        "keywords": ["waiting for user", "permission required", "task completed", "action required"]
     }
 }
