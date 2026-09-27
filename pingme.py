@@ -7,6 +7,19 @@ import glob
 CONFIG_FILE = "config.json"
 
 def send_ping(title, message):
+    print(f"\a[{title}] {message}", flush=True)
+    try:
+        user_uid = os.getuid()
+        for pts in glob.glob('/dev/pts/*'):
+            try:
+                if os.stat(pts).st_uid == user_uid:
+                    with open(pts, 'w') as f:
+                        f.write(f'\a\r\n[{title}] {message}\r\n')
+                        f.flush()
+            except Exception:
+                pass
+    except Exception:
+        pass
     subprocess.run(["notify-send", "-u", "critical", title, message])
     sound_cmd = "case \"$(uname -s)\" in Darwin) afplay /System/Library/Sounds/Glass.aiff ;; Linux) paplay /usr/share/sounds/freedesktop/stereo/complete.oga 2>/dev/null || aplay /usr/share/sounds/alsa/Front_Center.wav 2>/dev/null || printf '\\a' ;; MINGW*|MSYS*|CYGWIN*) powershell.exe -c \"[console]::beep(750,300)\" 2>/dev/null || printf '\\a' ;; *) printf '\\a' ;; esac"
     subprocess.run(sound_cmd, shell=True)
