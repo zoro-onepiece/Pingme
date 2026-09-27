@@ -1,0 +1,5 @@
+pings.log
+.agents/
+.last_ping
+pingme.pid
+__pycache__/
