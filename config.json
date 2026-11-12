@@ -1,7 +1,10 @@
 {
     "Antigravity": {
-        "log_pattern": "~/.gemini/antigravity-cli/brain/**/*.jsonl",
-        "keywords": ["waiting_for_input", "waiting for user", "action required", "USER_INPUT", "permission required", "approval"]
+        "log_patterns": [
+            "~/.gemini/antigravity-cli/log/cli-*.log",
+            "~/.gemini/antigravity-cli/brain/**/*.jsonl"
+        ],
+        "keywords": ["Surfacing tool confirmation", "waiting_for_input", "waiting for user", "action required", "USER_INPUT", "permission required", "approval"]
     },
     "Cursor": {
         "log_pattern": "~/.config/Cursor/logs/**/*.log",
@@ -12,19 +15,82 @@
         "keywords": ["waiting for user", "waiting for input", "action required", "permission required", "task completed", "approval", "USER_INPUT"]
     },
     "Claude Code": {
-        "log_pattern": "~/.claude/**/*.log",
-        "keywords": ["waiting for input", "waiting for user", "action required", "permission required", "task completed", "approval", "USER_INPUT"]
+        "log_pattern": "",
+        "keywords": []
     },
     "Qoder": {
         "log_pattern": "~/.qoder/**/*.log",
         "keywords": ["waiting for user", "waiting for input", "action required", "permission required", "task completed", "approval", "USER_INPUT"]
     },
     "OpenCode": {
-        "log_pattern": "~/.opencode/**/*.log",
-        "keywords": ["waiting for user", "waiting for input", "action required", "permission required", "task completed", "approval", "USER_INPUT"]
+        "log_pattern": "",
+        "keywords": []
     },
     "CommandCode": {
         "log_pattern": "~/.commandcode/**/*.log",
         "keywords": ["waiting for user", "waiting for input", "action required", "permission required", "task completed", "approval", "USER_INPUT"]
+    },
+    "Sudo": {
+        "log_pattern": "",
+        "keywords": [
+            "[sudo] password for",
+            "password for",
+            "password:",
+            "enter passphrase",
+            "passphrase for"
+        ]
+    },
+    "Yay": {
+        "log_pattern": "",
+        "keywords": [
+            "proceed with installation?",
+            "differences in pkgbuild",
+            "packages to cleanbuild",
+            "enter a selection",
+            "enter a number",
+            "[sudo] password for",
+            "password for",
+            "password:",
+            "do you want to proceed",
+            "do you want to continue",
+            "[y/n]",
+            "[y/n]:",
+            "(y/n)"
+        ]
+    },
+    "Pacman": {
+        "log_pattern": "",
+        "keywords": [
+            "proceed with installation?",
+            "replace",
+            "[sudo] password for",
+            "password for",
+            "password:",
+            "do you want to proceed",
+            "do you want to continue",
+            "[y/n]",
+            "[y/n]:",
+            "(y/n)"
+        ]
+    },
+    "Terminal": {
+        "log_pattern": "",
+        "keywords": [
+            "[sudo] password for",
+            "password for",
+            "password:",
+            "enter passphrase",
+            "passphrase for",
+            "proceed with installation?",
+            "do you want to proceed",
+            "do you want to continue",
+            "are you sure",
+            "permission required",
+            "permission requested",
+            "action required",
+            "[y/n]",
+            "[y/n]:",
+            "(y/n)"
+        ]
     }
 }

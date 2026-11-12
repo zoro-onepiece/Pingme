@@ -3,3 +3,4 @@ pings.log
 .last_ping
 pingme.pid
 __pycache__/
+.last_ping.lock
